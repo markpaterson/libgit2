@@ -59,7 +59,7 @@
    #undefs RE_DUP_MAX and sets it to the right value.  */
 #include <limits.h>
 
-#ifdef GAWK
+#if defined(GAWK) && !defined(__ANDROID__)
 #undef alloca
 #define alloca alloca_is_bad_you_should_never_use_it
 #endif
